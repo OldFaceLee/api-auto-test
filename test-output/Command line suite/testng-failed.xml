@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="22" name="Failed suite [Command line suite]" parallel="methods">
+  <test name="Command line test(failed)" parallel="methods">
+    <groups>
+      <run>
+        <include name="tc01"/>
+        <include name="tc02"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.ai.api.testsuite.TestSuite">
+        <methods>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="tc01" invocation-numbers="1 2"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="tc02" invocation-numbers="0 1"/>
+          <include name="springTestContextAfterTestMethod"/>
+        </methods>
+      </class> <!-- com.ai.api.testsuite.TestSuite -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Command line suite] -->

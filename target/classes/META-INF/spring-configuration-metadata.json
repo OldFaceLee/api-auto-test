@@ -1,0 +1,22 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.ai.api.configration.GatewayConfig",
+      "name": "gateway",
+      "type": "com.ai.api.configration.GatewayConfig"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.ai.api.configration.GatewayConfig",
+      "name": "gateway.sandbox",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.ai.api.configration.GatewayConfig",
+      "name": "gateway.uat",
+      "type": "java.lang.String"
+    }
+  ]
+}
