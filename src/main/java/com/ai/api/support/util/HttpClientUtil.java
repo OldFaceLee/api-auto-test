@@ -2,6 +2,7 @@ package com.ai.api.support.util;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.http.HttpEntity;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
@@ -15,7 +16,6 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
-import org.apache.log4j.Logger;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -28,6 +28,7 @@ import java.util.*;
  * @date: Create in 2020/4/13 下午12:14
  * @description:
  */
+@Slf4j
 public class HttpClientUtil {
     private HttpClientUtil(){}
     private static class Singleton{
@@ -37,7 +38,6 @@ public class HttpClientUtil {
         return Singleton.instance;
     }
 
-    private final Logger log = Logger.getLogger(HttpClientUtil.class);
     private CloseableHttpClient httpClient;
     private CloseableHttpResponse httpResponse;
     private HttpEntity httpEntity;

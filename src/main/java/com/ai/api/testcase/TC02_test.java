@@ -25,6 +25,9 @@ public class TC02_test implements ITestCase {
     @Autowired
     ITestCaseSv sv;
 
+    @Autowired
+    Check check;
+
 
     @Override
     public void runScript(Map<String, String> map) {
@@ -33,9 +36,9 @@ public class TC02_test implements ITestCase {
         int index = testParamPool.getInt("index");
         JSONObject obj = sv.obtainMap(index);
 //        System.out.println("测试1"+ AssociatedParam.getInstance().getParamMapValueByKey("actual"));
-        String expect = testParamPool.getString(VerifyEnum.CHECK_RESULT_CODE_COLUMN.getValue());
+        String expect = testParamPool.getString(VerifyEnum.CHECK_RESULT_CODE.getValue());
         String actual = obj.get("resultCode").toString();
-        Check.verifyResultCode(expect,actual);
+        check.verifyResultCode(expect,actual);
 //        Check.verifyJsonResultContainsStr(testParamPool.getString(VerifyEnum.CHECK_RESULT_DATA_COLUMN.getValue()),obj.get("key").toString());
     }
 }

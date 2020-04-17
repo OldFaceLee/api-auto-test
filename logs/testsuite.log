@@ -2600,3 +2600,100 @@ Caused by: java.net.ConnectException: Connection refused (Connection refused)
 2020-04-16 11:05:29.753 |-INFO  [Thread-2] org.springframework.context.annotation.AnnotationConfigApplicationContext [991] -| Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@6c2c1385: startup date [Thu Apr 16 11:05:25 CST 2020]; root of context hierarchy
 2020-04-16 11:05:29.786 |-INFO  [Thread-2] com.alibaba.druid.pool.DruidDataSource [1948] -| {dataSource-1} closing ...
 2020-04-16 11:05:29.796 |-INFO  [Thread-2] com.alibaba.druid.pool.DruidDataSource [2020] -| {dataSource-1} closed
+2020-04-17 10:32:59.345 |-INFO  [main] com.ai.api.testsuite.TestSuite [50] -| Starting TestSuite on localhost with PID 36470 (/Users/macos/Desktop/OldFace/study/api-auto-test/target/classes started by macos in /Users/macos/Desktop/OldFace/study/api-auto-test)
+2020-04-17 10:32:59.349 |-INFO  [main] com.ai.api.testsuite.TestSuite [654] -| No active profile set, falling back to default profiles: default
+2020-04-17 10:32:59.374 |-INFO  [main] org.springframework.context.annotation.AnnotationConfigApplicationContext [588] -| Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@67545b57: startup date [Fri Apr 17 10:32:59 CST 2020]; root of context hierarchy
+2020-04-17 10:33:00.171 |-INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate [172] -| Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-17 10:33:00.551 |-INFO  [main] org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor [153] -| JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-04-17 10:33:00.834 |-INFO  [main] com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure [56] -| Init DruidDataSource
+2020-04-17 10:33:01.160 |-INFO  [main] com.alibaba.druid.pool.DruidDataSource [1003] -| {dataSource-1} inited
+2020-04-17 10:33:01.215 |-INFO  [main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper [308] -| Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.ai.api.testsuite.TestSuite], using SpringBootContextLoader
+2020-04-17 10:33:01.217 |-INFO  [main] org.springframework.test.context.support.AbstractContextLoader [264] -| Could not detect default resource locations for test class [com.ai.api.testsuite.TestSuite]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-04-17 10:33:01.225 |-INFO  [main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper [177] -| Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@23ee75c5, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@11a7ba62, org.springframework.test.context.support.DirtiesContextTestExecutionListener@340b7ef6]
+2020-04-17 10:33:02.469 |-INFO  [main] org.springframework.ui.freemarker.SpringTemplateLoader [62] -| SpringTemplateLoader for FreeMarker: using resource loader [org.springframework.context.annotation.AnnotationConfigApplicationContext@67545b57: startup date [Fri Apr 17 10:32:59 CST 2020]; root of context hierarchy] and template loader path [classpath:/templates/]
+2020-04-17 10:33:02.504 |-WARN  [main] org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration [70] -| Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2020-04-17 10:33:02.862 |-INFO  [main] com.ai.api.testsuite.TestSuite [59] -| Started TestSuite in 4.512 seconds (JVM running for 7.951)
+2020-04-17 10:33:03.607 |-INFO  [main] com.ai.api.testcase.TC01_test [38] -| maintc01线程
+2020-04-17 10:33:03.609 |-INFO  [main] com.ai.api.testcase.TC01_test [40] -| 地址d
+2020-04-17 10:33:03.761 |-INFO  [main] com.ai.api.testcase.TC01_test [44] -| 实际000000
+2020-04-17 10:33:03.762 |-INFO  [main] com.ai.api.testcase.TC01_test [46] -| 期望000000
+2020-04-17 10:33:03.763 |-INFO  [main] com.ai.api.support.dataDriver.Check [24] -| 期望值=000000, 实际值=000000
+2020-04-17 10:33:03.765 |-INFO  [main] com.ai.api.support.dataDriver.Check [24] -| 期望值=测试服务的删除用例功能接口, 实际值=测试服务的删除用例功能接口
+2020-04-17 10:33:04.013 |-INFO  [main] com.ai.api.support.database.JDBCOperatorImpl [127] -| 创建数据库statement连接
+2020-04-17 10:33:04.036 |-INFO  [main] com.ai.api.support.database.JDBCOperatorImpl [130] -| 执行sql查询语句【SELECT * from tp_testcase where case_id = 'tc_003'】
+2020-04-17 10:33:04.041 |-INFO  [main] com.ai.api.support.database.JDBCOperatorImpl [145] -| SQL语句【SELECT * from tp_testcase where case_id = 'tc_003'】返回的数据：[{request_type=null, case_groups=, case_name=tc_002_testDeleteTestcaseFunc, uri=/testcase/delete, update_date=null, create_owner=李学军, param=null, is_valid=0, case_id=tc_003, case_desc=测试服务的删除用例功能接口, header=null, id=3, create_date=2020-03-27 09:59:45.0}]
+2020-04-17 10:33:04.045 |-INFO  [main] com.ai.api.support.database.JDBCOperatorImpl [151] -| 关闭JDBC的rs
+2020-04-17 10:33:04.046 |-INFO  [main] com.ai.api.support.database.JDBCOperatorImpl [155] -| 关闭JDBCd stmt
+2020-04-17 10:33:04.059 |-INFO  [main] com.ai.api.support.database.JDBCOperatorImpl [159] -| 释放dataSource
+2020-04-17 10:33:04.060 |-INFO  [main] com.ai.api.support.database.JDBCOperatorImpl [52] -| 数据库表中字段【case_desc】对应column值为：[测试服务的删除用例功能接口]
+2020-04-17 10:33:04.060 |-INFO  [main] com.ai.api.support.dataDriver.Check [24] -| 期望值=测试服务的删除用例功能接口, 实际值=测试服务的删除用例功能接口
+2020-04-17 10:33:04.080 |-INFO  [Thread-2] org.springframework.context.annotation.AnnotationConfigApplicationContext [991] -| Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@67545b57: startup date [Fri Apr 17 10:32:59 CST 2020]; root of context hierarchy
+2020-04-17 10:33:04.142 |-INFO  [Thread-2] com.alibaba.druid.pool.DruidDataSource [1948] -| {dataSource-1} closing ...
+2020-04-17 10:33:04.154 |-INFO  [Thread-2] com.alibaba.druid.pool.DruidDataSource [2020] -| {dataSource-1} closed
+2020-04-17 10:39:58.291 |-INFO  [main] com.ai.api.testsuite.TestSuite [50] -| Starting TestSuite on localhost with PID 36496 (/Users/macos/Desktop/OldFace/study/api-auto-test/target/classes started by macos in /Users/macos/Desktop/OldFace/study/api-auto-test)
+2020-04-17 10:39:58.301 |-INFO  [main] com.ai.api.testsuite.TestSuite [654] -| No active profile set, falling back to default profiles: default
+2020-04-17 10:39:58.321 |-INFO  [main] org.springframework.context.annotation.AnnotationConfigApplicationContext [588] -| Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@67545b57: startup date [Fri Apr 17 10:39:58 CST 2020]; root of context hierarchy
+2020-04-17 10:39:59.268 |-INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate [172] -| Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-17 10:39:59.704 |-INFO  [main] org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor [153] -| JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-04-17 10:39:59.989 |-INFO  [main] com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure [56] -| Init DruidDataSource
+2020-04-17 10:40:00.332 |-INFO  [main] com.alibaba.druid.pool.DruidDataSource [1003] -| {dataSource-1} inited
+2020-04-17 10:40:00.379 |-INFO  [main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper [308] -| Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.ai.api.testsuite.TestSuite], using SpringBootContextLoader
+2020-04-17 10:40:00.381 |-INFO  [main] org.springframework.test.context.support.AbstractContextLoader [264] -| Could not detect default resource locations for test class [com.ai.api.testsuite.TestSuite]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-04-17 10:40:00.388 |-INFO  [main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper [177] -| Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@30b2b76f, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@56da52a7, org.springframework.test.context.support.DirtiesContextTestExecutionListener@23ee75c5]
+2020-04-17 10:40:01.310 |-INFO  [main] org.springframework.ui.freemarker.SpringTemplateLoader [62] -| SpringTemplateLoader for FreeMarker: using resource loader [org.springframework.context.annotation.AnnotationConfigApplicationContext@67545b57: startup date [Fri Apr 17 10:39:58 CST 2020]; root of context hierarchy] and template loader path [classpath:/templates/]
+2020-04-17 10:40:01.317 |-WARN  [main] org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration [70] -| Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2020-04-17 10:40:01.625 |-INFO  [main] com.ai.api.testsuite.TestSuite [59] -| Started TestSuite in 4.299 seconds (JVM running for 6.491)
+2020-04-17 10:40:02.359 |-INFO  [Thread-2] org.springframework.context.annotation.AnnotationConfigApplicationContext [991] -| Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@67545b57: startup date [Fri Apr 17 10:39:58 CST 2020]; root of context hierarchy
+2020-04-17 10:40:02.395 |-INFO  [Thread-2] com.alibaba.druid.pool.DruidDataSource [1948] -| {dataSource-1} closing ...
+2020-04-17 10:40:02.397 |-INFO  [Thread-2] com.alibaba.druid.pool.DruidDataSource [2020] -| {dataSource-1} closed
+2020-04-17 10:41:29.436 |-INFO  [main] com.ai.api.testsuite.TestSuite [50] -| Starting TestSuite on localhost with PID 36505 (/Users/macos/Desktop/OldFace/study/api-auto-test/target/classes started by macos in /Users/macos/Desktop/OldFace/study/api-auto-test)
+2020-04-17 10:41:29.441 |-INFO  [main] com.ai.api.testsuite.TestSuite [654] -| No active profile set, falling back to default profiles: default
+2020-04-17 10:41:29.460 |-INFO  [main] org.springframework.context.annotation.AnnotationConfigApplicationContext [588] -| Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@67545b57: startup date [Fri Apr 17 10:41:29 CST 2020]; root of context hierarchy
+2020-04-17 10:41:30.255 |-INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate [172] -| Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-17 10:41:30.679 |-INFO  [main] org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor [153] -| JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-04-17 10:41:30.963 |-INFO  [main] com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure [56] -| Init DruidDataSource
+2020-04-17 10:41:31.281 |-INFO  [main] com.alibaba.druid.pool.DruidDataSource [1003] -| {dataSource-1} inited
+2020-04-17 10:41:31.345 |-INFO  [main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper [308] -| Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.ai.api.testsuite.TestSuite], using SpringBootContextLoader
+2020-04-17 10:41:31.346 |-INFO  [main] org.springframework.test.context.support.AbstractContextLoader [264] -| Could not detect default resource locations for test class [com.ai.api.testsuite.TestSuite]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-04-17 10:41:31.365 |-INFO  [main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper [177] -| Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@57b9e423, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@304a3655, org.springframework.test.context.support.DirtiesContextTestExecutionListener@368d5c00]
+2020-04-17 10:41:32.216 |-INFO  [main] org.springframework.ui.freemarker.SpringTemplateLoader [62] -| SpringTemplateLoader for FreeMarker: using resource loader [org.springframework.context.annotation.AnnotationConfigApplicationContext@67545b57: startup date [Fri Apr 17 10:41:29 CST 2020]; root of context hierarchy] and template loader path [classpath:/templates/]
+2020-04-17 10:41:32.227 |-WARN  [main] org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration [70] -| Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2020-04-17 10:41:32.525 |-INFO  [main] com.ai.api.testsuite.TestSuite [59] -| Started TestSuite in 4.074 seconds (JVM running for 5.984)
+2020-04-17 10:41:33.269 |-INFO  [main] com.ai.api.testcase.TC01_test [38] -| maintc01线程
+2020-04-17 10:41:33.271 |-INFO  [main] com.ai.api.testcase.TC01_test [40] -| 地址d
+2020-04-17 10:41:33.385 |-INFO  [main] com.ai.api.testcase.TC01_test [44] -| 实际000000
+2020-04-17 10:41:33.386 |-INFO  [main] com.ai.api.testcase.TC01_test [46] -| 期望000000
+2020-04-17 10:41:33.387 |-INFO  [main] com.ai.api.support.dataDriver.Check [24] -| 期望值=000000, 实际值=000000
+2020-04-17 10:41:33.390 |-INFO  [main] com.ai.api.support.dataDriver.Check [24] -| 期望值=测试服务的删除用例功能接口, 实际值=测试服务的删除用例功能接口
+2020-04-17 10:41:33.390 |-INFO  [main] com.ai.api.support.dataDriver.Check [62] -| sql【SELECT * from tp_testcase where case_id = 'tc_003'】或者 expectColumn【null】为空，不执行JDBC
+2020-04-17 10:41:33.401 |-INFO  [Thread-2] org.springframework.context.annotation.AnnotationConfigApplicationContext [991] -| Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@67545b57: startup date [Fri Apr 17 10:41:29 CST 2020]; root of context hierarchy
+2020-04-17 10:41:33.436 |-INFO  [Thread-2] com.alibaba.druid.pool.DruidDataSource [1948] -| {dataSource-1} closing ...
+2020-04-17 10:41:33.439 |-INFO  [Thread-2] com.alibaba.druid.pool.DruidDataSource [2020] -| {dataSource-1} closed
+2020-04-17 10:43:57.872 |-INFO  [main] com.ai.api.testsuite.TestSuite [50] -| Starting TestSuite on localhost with PID 36515 (/Users/macos/Desktop/OldFace/study/api-auto-test/target/classes started by macos in /Users/macos/Desktop/OldFace/study/api-auto-test)
+2020-04-17 10:43:57.874 |-INFO  [main] com.ai.api.testsuite.TestSuite [654] -| No active profile set, falling back to default profiles: default
+2020-04-17 10:43:57.893 |-INFO  [main] org.springframework.context.annotation.AnnotationConfigApplicationContext [588] -| Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@492691d7: startup date [Fri Apr 17 10:43:57 CST 2020]; root of context hierarchy
+2020-04-17 10:43:58.737 |-INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate [172] -| Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-17 10:43:59.194 |-INFO  [main] org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor [153] -| JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2020-04-17 10:43:59.464 |-INFO  [main] com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure [56] -| Init DruidDataSource
+2020-04-17 10:43:59.784 |-INFO  [main] com.alibaba.druid.pool.DruidDataSource [1003] -| {dataSource-1} inited
+2020-04-17 10:43:59.854 |-INFO  [main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper [308] -| Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.ai.api.testsuite.TestSuite], using SpringBootContextLoader
+2020-04-17 10:43:59.855 |-INFO  [main] org.springframework.test.context.support.AbstractContextLoader [264] -| Could not detect default resource locations for test class [com.ai.api.testsuite.TestSuite]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-04-17 10:43:59.864 |-INFO  [main] org.springframework.boot.test.context.SpringBootTestContextBootstrapper [177] -| Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@aa10649, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@6b3871d6, org.springframework.test.context.support.DirtiesContextTestExecutionListener@37095ded]
+2020-04-17 10:44:00.745 |-INFO  [main] org.springframework.ui.freemarker.SpringTemplateLoader [62] -| SpringTemplateLoader for FreeMarker: using resource loader [org.springframework.context.annotation.AnnotationConfigApplicationContext@492691d7: startup date [Fri Apr 17 10:43:57 CST 2020]; root of context hierarchy] and template loader path [classpath:/templates/]
+2020-04-17 10:44:00.753 |-WARN  [main] org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration [70] -| Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2020-04-17 10:44:01.045 |-INFO  [main] com.ai.api.testsuite.TestSuite [59] -| Started TestSuite in 4.38 seconds (JVM running for 6.984)
+2020-04-17 10:44:01.703 |-INFO  [main] com.ai.api.testcase.TC01_test [38] -| maintc01线程
+2020-04-17 10:44:01.704 |-INFO  [main] com.ai.api.testcase.TC01_test [40] -| 地址d
+2020-04-17 10:44:01.783 |-INFO  [main] com.ai.api.testcase.TC01_test [44] -| 实际000000
+2020-04-17 10:44:01.784 |-INFO  [main] com.ai.api.testcase.TC01_test [46] -| 期望000000
+2020-04-17 10:44:01.785 |-INFO  [main] com.ai.api.support.dataDriver.Check [24] -| 期望值=000000, 实际值=000000
+2020-04-17 10:44:01.792 |-INFO  [main] com.ai.api.support.dataDriver.Check [24] -| 期望值=测试服务的删除用例功能接口, 实际值=测试服务的删除用例功能接口
+2020-04-17 10:44:01.793 |-INFO  [main] com.ai.api.support.dataDriver.Check [62] -| sql【SELECT * from tp_testcase where case_id = 'tc_003'】或者 expectColumn【null】为空，不执行JDBC
+2020-04-17 10:44:01.798 |-INFO  [main] com.ai.api.testcase.TC01_test [38] -| maintc01线程
+2020-04-17 10:44:01.800 |-INFO  [main] com.ai.api.testcase.TC01_test [40] -| 地址d
+2020-04-17 10:44:01.804 |-INFO  [main] com.ai.api.testcase.TC01_test [44] -| 实际000000
+2020-04-17 10:44:01.807 |-INFO  [main] com.ai.api.testcase.TC01_test [46] -| 期望0.0
+2020-04-17 10:44:01.810 |-INFO  [main] com.ai.api.support.dataDriver.Check [24] -| 期望值=0.0, 实际值=000000
+2020-04-17 10:44:01.842 |-INFO  [Thread-2] org.springframework.context.annotation.AnnotationConfigApplicationContext [991] -| Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@492691d7: startup date [Fri Apr 17 10:43:57 CST 2020]; root of context hierarchy
+2020-04-17 10:44:01.905 |-INFO  [Thread-2] com.alibaba.druid.pool.DruidDataSource [1948] -| {dataSource-1} closing ...
+2020-04-17 10:44:01.907 |-INFO  [Thread-2] com.alibaba.druid.pool.DruidDataSource [2020] -| {dataSource-1} closed

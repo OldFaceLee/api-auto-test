@@ -29,6 +29,9 @@ public class TC01_test implements ITestCase {
     @Autowired
     URi uRi;
 
+    @Autowired
+    Check check;
+
 
     @Override
     public void runScript(Map<String, String> map) {
@@ -39,10 +42,11 @@ public class TC01_test implements ITestCase {
         JSONObject obj = sv.obtainList(sbuID);
         String actual = obj.get("resultCode").toString();
         log.info("实际"+actual);
-        String expect = testParamPool.getString(VerifyEnum.CHECK_RESULT_CODE_COLUMN.getValue());
+        String expect = testParamPool.getString(VerifyEnum.CHECK_RESULT_CODE.getValue());
         log.info("期望"+expect);
         AssociatedParam.getInstance().putKeyValue("actual",actual);
-        Check.verifyResultCode(expect,actual);
-        Check.verifyResultDataColumnValue(testParamPool.getString(VerifyEnum.CHECK_RESULT_DATA_COLUMN.getValue()),obj.getJSONObject("data").get("key").toString());
+        check.verifyResultCode(expect,actual);
+        check.verifyResultDataColumnValue(testParamPool.getString(VerifyEnum.CHECK_RESULT_DATA.getValue()),obj.getJSONObject("data").get("key").toString());
+        check.verifyBySQL(testParamPool.getString(VerifyEnum.CHECK_SQL.getValue()),testParamPool.getString(VerifyEnum.CHECK_SQL_COLUMN.getValue()),testParamPool.getString(VerifyEnum.CHECK_RESULT_DATA.getValue()));
     }
 }

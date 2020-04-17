@@ -28,7 +28,7 @@ public class TestCaseSvImpl implements ITestCaseSv {
              obj = JSON.parseObject("{\n" +
                     "\"resultCode\":\"000000\",\n" +
                     "\"data\":{\n" +
-                    "\"key\":\"通过\",\n" +
+                    "\"key\":\"测试服务的删除用例功能接口\",\n" +
                     "\"value\":\"不通过\"\n" +
                     "}}");
         }
