@@ -13,6 +13,7 @@ import org.testng.*;
 import org.testng.xml.XmlSuite;
 
 import java.io.File;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class ExtentTestNGIReporterListener implements IReporter {
@@ -150,9 +151,9 @@ public class ExtentTestNGIReporterListener implements IReporter {
                 Object[] parameters = result.getParameters();
                 String name="";
                 //如果有参数，则使用参数的toString组合代替报告中的name
-                for(Object param:parameters){
+               /* for(Object param:parameters){
                     name+=param.toString();
-                }
+                }*/  //不显示参数化 -李学军修改
                 if(name.length()>0){
                     if(name.length()>50){
                         name= name.substring(0,49)+"...";
@@ -169,7 +170,7 @@ public class ExtentTestNGIReporterListener implements IReporter {
                 //test.getModel().setDescription(description.toString());
                 //test = extent.createTest(result.getMethod().getMethodName());
                 for (String group : result.getMethod().getGroups())
-                    test.assignCategory(group);
+                    test.assignCategory(group); //组名的显示- 李学军修改
 
                 List<String> outputList = Reporter.getOutput(result);
                 for(String output:outputList){

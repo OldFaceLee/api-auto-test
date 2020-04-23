@@ -18,6 +18,6 @@ import java.io.File;
 public class BaseSuite extends AbstractTestNGSpringContextTests {
     public static void main(String[] args) {
 //        TestCaseListGenerator.run();
-//        TestNGAdapter.run();
+        TestNGAdapter.run();
     }
 }

@@ -6,8 +6,10 @@ import com.ai.api.testcase.TestJDBC;
 import com.ai.api.testdata.MapDataProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.Test;
 
+import java.util.Date;
 import java.util.Map;
 
 /**
@@ -26,7 +28,7 @@ public class TestSuite extends BaseSuite {
     TestJDBC testJDBC;
 
     @Test(groups = {"tc01","tc$"},dataProviderClass = MapDataProvider.class,dataProvider = "tc01")
-    public void tc01(Map<String,String> map){
+    public void tc011(Map<String,String> map){
         tc01_test.runScript(map);
 
     }
@@ -38,5 +40,10 @@ public class TestSuite extends BaseSuite {
     @Test(groups = {"jdbc"})
     public void TestJDBC(){
         testJDBC.runScript(null);
+    }
+
+    @AfterSuite
+    public void pushReport(){
+        System.out.println("推送了repoart"+new Date());
     }
 }
