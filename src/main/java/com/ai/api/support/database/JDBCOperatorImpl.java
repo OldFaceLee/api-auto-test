@@ -117,7 +117,7 @@ public class JDBCOperatorImpl implements IJDBCOperator{
     }
 
     /**
-     *数据库查询操作
+     *数据库查询操作，私有方法，为查询提供服务
      */
     private List<Map<String,Object>> result(String sql){
         List<Map<String,Object>> list = new ArrayList<Map<String,Object>>();//返回所有记录

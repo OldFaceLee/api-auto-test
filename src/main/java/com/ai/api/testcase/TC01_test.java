@@ -42,11 +42,11 @@ public class TC01_test implements ITestCase {
         JSONObject obj = sv.obtainList(sbuID);
         String actual = obj.get("resultCode").toString();
         log.info("实际"+actual);
-        String expect = testParamPool.getString(VerifyEnum.CHECK_RESULT_CODE.getValue());
+        String expect = testParamPool.getString(VerifyEnum.CHECK_RESPONSE_CODE.getValue());
         log.info("期望"+expect);
         AssociatedParam.getInstance().putKeyValue("actual",actual);
 //        check.verifyResultCode(expect,actual);
 //        check.verifyResultDataColumnValue(testParamPool.getString(VerifyEnum.CHECK_RESULT_DATA.getValue()),obj.getJSONObject("data").get("key").toString());
-        check.verifyBySQL(testParamPool.getString(VerifyEnum.CHECK_SQL.getValue()),testParamPool.getString(VerifyEnum.CHECK_SQL_COLUMN.getValue()),testParamPool.getString(VerifyEnum.CHECK_RESULT_DATA.getValue()));
+        check.verifyBySQL(testParamPool.getString(VerifyEnum.CHECK_SQL.getValue()),testParamPool.getString(VerifyEnum.CHECK_SQL_COLUMN.getValue()),testParamPool.getString(VerifyEnum.CHECK_RESPONSE_DATA.getValue()));
     }
 }

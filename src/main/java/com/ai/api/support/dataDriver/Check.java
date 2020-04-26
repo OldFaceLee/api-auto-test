@@ -20,6 +20,9 @@ public class Check {
     @Autowired
     IJDBCOperator jdbcOperator;
 
+    /**
+     *私有方法，共用相等对比
+     */
     private void assertEquals(String expect,String actual){
         log.info("期望值="+expect+", 实际值="+actual);
         Assert.assertEquals(expect,actual);

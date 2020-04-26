@@ -41,6 +41,9 @@ public class TestParamPool {
         return value;
     }
 
+    /**
+     *string转Long
+     */
     public Long getLong(String key){
         String value = map.get(key);
         Long result = Long.parseLong(value);
@@ -50,6 +53,9 @@ public class TestParamPool {
         return result;
     }
 
+    /**
+     *String转Integer
+     */
     public Integer getInt(String key){
         String value = map.get(key);
         Integer result = Integer.parseInt(value);
@@ -59,6 +65,9 @@ public class TestParamPool {
         return result;
     }
 
+    /**
+     *私有方法，为getDate(String key)提供服务
+     */
     private static Date stringToDate(String sdfPattern,String dateTimeStr) {
         SimpleDateFormat sdf = new SimpleDateFormat(sdfPattern);
         Date date = null;
@@ -70,6 +79,9 @@ public class TestParamPool {
         return new Date(date.getTime());
     }
 
+    /**
+     *私有方法，为 getTimeStamp(String key)提供服务
+     */
     private static long dateToStamp(String sdfPattern, String dateTimePatten) {
         SimpleDateFormat sdf = new SimpleDateFormat(sdfPattern);
         Date date = null;
@@ -83,6 +95,9 @@ public class TestParamPool {
         return ts.getTime();
     }
 
+    /**
+     *将string转化成时间戳13位
+     */
     public long getTimeStamp(String key){
         String value = map.get(key);
         //时间格式
@@ -103,6 +118,9 @@ public class TestParamPool {
         return 0L;
     }
 
+    /**
+     *将string转化为Date
+     */
     public Date getDate(String key){
         String value = map.get(key);
         //时间格式
@@ -123,6 +141,9 @@ public class TestParamPool {
         return null;
     }
 
+    /**
+     *将其string转换为boolean
+     */
     public boolean getBoolean(String key){
         String value = map.get(key);
         boolean rs = false;
@@ -140,6 +161,9 @@ public class TestParamPool {
         return rs;
     }
 
+    /**
+     * 将其string转化为double
+     */
     public Double getDouble(String key){
         String value = map.get(key);
         Double rs = Double.parseDouble(value);
