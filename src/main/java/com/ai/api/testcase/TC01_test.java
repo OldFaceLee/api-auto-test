@@ -34,12 +34,12 @@ public class TC01_test implements ITestCase {
 
 
     @Override
-    public void runScript(Map<String, String> map) {
+    public synchronized void runScript(Map<String, String> excelData) {
         log.info(Thread.currentThread().getName()+"tc01线程");
-        TestParamPool testParamPool = new TestParamPool(map);
+        TestParamPool testParamPool = new TestParamPool(excelData);
         String caseDesc = testParamPool.getString(CheckEnum.CASE_DESC.getValue());
-        String sbuID = testParamPool.getString("sbuID");
         log.info("TC01_test: "+caseDesc);
+        String sbuID = testParamPool.getString("sbuID");
         JSONObject obj = sv.obtainList(sbuID);
         String actualCode = obj.get("resultCode").toString();
         String expectCode = testParamPool.getString(CheckEnum.CHECK_RESPONSE_CODE.getValue());
@@ -48,4 +48,5 @@ public class TC01_test implements ITestCase {
         check.verifyResponseDataEqualsExpect(testParamPool.getString(CheckEnum.CHECK_RESPONSE_DATA.getValue()),obj.getJSONObject("data").get("key").toString());
         check.verifyEqualsBySQL(testParamPool.getString(CheckEnum.CHECK_SQL.getValue()),testParamPool.getString(CheckEnum.CHECK_SQL_COLUMN.getValue()),testParamPool.getString(CheckEnum.CHECK_RESPONSE_DATA.getValue()));
     }
+
 }

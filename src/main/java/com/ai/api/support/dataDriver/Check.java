@@ -62,7 +62,7 @@ public class Check {
      */
     public void verifyEqualsBySQL(String sql,String expectColumn,String expectResponseValue){
         if(sql == null || expectColumn == null){
-            log.info("sql【"+sql+"】或者 expectColumn【"+expectColumn+"】为空，不执行JDBC" );
+            log.info("sql【"+sql+"】或者 checkSqlResult【"+expectColumn+"】为空，不执行JDBC" );
             return;
         }
         List<String> expect = jdbcOperator.query(sql,expectColumn);

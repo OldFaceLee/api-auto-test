@@ -10,7 +10,7 @@ public enum CheckEnum {
     RESULT_CODE_OK("000000","返回成功"),
     CASE_DESC("caseDesc","Excel中caseDesc列，该列作用为case描述一般用于打印Log方便定位问题"),
     CHECK_RESPONSE_CODE("checkReponseCode","Excel中checkReponseCode列，接口返回期望响应code值"),
-    CHECK_RESPONSE_DATA_ASSERT_TYPE("CheckResponseDataAssertType","excel中CheckResponseDataAssertType列，接口返回数据断言类型，相等、包含"),
+    CHECK_RESPONSE_DATA_ASSERT_TYPE("checkResponseDataAssertType","excel中CheckResponseDataAssertType列，接口返回数据断言类型，相等、包含"),
     CHECK_RESPONSE_DATA("checkResponseData","excel中checkResponseData列，接口返回值"),
     CHECK_SQL("checkSQL","excel中checkSQL列，需要执行的sql语句"),
     CHECK_SQL_RESULT_ASSERT_TYPE("checkSqlResultAssertType","excel中checkSqlResultAssertType列，sql查询断言类型，相等、包含"),
