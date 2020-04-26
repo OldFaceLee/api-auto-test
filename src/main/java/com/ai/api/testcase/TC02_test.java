@@ -4,7 +4,6 @@ import com.ai.api.common.ITestCase;
 import com.ai.api.support.dataDriver.AssociatedParam;
 import com.ai.api.support.dataDriver.Check;
 import com.ai.api.services.ITestCaseSv;
-import com.ai.api.support.em.VerifyEnum;
 import com.ai.api.support.dataDriver.TestParamPool;
 import com.alibaba.fastjson.JSONObject;
 import lombok.extern.slf4j.Slf4j;
@@ -35,10 +34,6 @@ public class TC02_test implements ITestCase {
         TestParamPool testParamPool = new TestParamPool(map);
         int index = testParamPool.getInt("index");
         JSONObject obj = sv.obtainMap(index);
-//        System.out.println("测试1"+ AssociatedParam.getInstance().getParamMapValueByKey("actual"));
-        String expect = testParamPool.getString(VerifyEnum.CHECK_RESPONSE_CODE.getValue());
-        String actual = obj.get("resultCode").toString();
-        check.verifyResultCode(expect,actual);
 //        Check.verifyJsonResultContainsStr(testParamPool.getString(VerifyEnum.CHECK_RESULT_DATA_COLUMN.getValue()),obj.get("key").toString());
     }
 }

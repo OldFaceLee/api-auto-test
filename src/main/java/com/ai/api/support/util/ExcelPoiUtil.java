@@ -131,6 +131,9 @@ public class ExcelPoiUtil {
 
     private static String getCellValue(Cell cell) {
         String value = "";
+        if(cell == null){
+            return value;
+        }
         switch (cell.getCellTypeEnum()) {
             case STRING:
                 value = String.valueOf(cell.getRichStringCellValue());

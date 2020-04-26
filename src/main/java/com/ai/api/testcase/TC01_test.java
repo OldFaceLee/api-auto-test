@@ -5,7 +5,7 @@ import com.ai.api.constant.URi;
 import com.ai.api.support.dataDriver.AssociatedParam;
 import com.ai.api.support.dataDriver.Check;
 import com.ai.api.services.ITestCaseSv;
-import com.ai.api.support.em.VerifyEnum;
+import com.ai.api.support.em.CheckEnum;
 import com.ai.api.support.dataDriver.TestParamPool;
 import com.alibaba.fastjson.JSONObject;
 import lombok.extern.slf4j.Slf4j;
@@ -37,16 +37,15 @@ public class TC01_test implements ITestCase {
     public void runScript(Map<String, String> map) {
         log.info(Thread.currentThread().getName()+"tc01线程");
         TestParamPool testParamPool = new TestParamPool(map);
-        log.info("地址"+uRi.gatewayUrl());
+        String caseDesc = testParamPool.getString(CheckEnum.CASE_DESC.getValue());
         String sbuID = testParamPool.getString("sbuID");
+        log.info("TC01_test: "+caseDesc);
         JSONObject obj = sv.obtainList(sbuID);
-        String actual = obj.get("resultCode").toString();
-        log.info("实际"+actual);
-        String expect = testParamPool.getString(VerifyEnum.CHECK_RESPONSE_CODE.getValue());
-        log.info("期望"+expect);
-        AssociatedParam.getInstance().putKeyValue("actual",actual);
-//        check.verifyResultCode(expect,actual);
-//        check.verifyResultDataColumnValue(testParamPool.getString(VerifyEnum.CHECK_RESULT_DATA.getValue()),obj.getJSONObject("data").get("key").toString());
-        check.verifyBySQL(testParamPool.getString(VerifyEnum.CHECK_SQL.getValue()),testParamPool.getString(VerifyEnum.CHECK_SQL_COLUMN.getValue()),testParamPool.getString(VerifyEnum.CHECK_RESPONSE_DATA.getValue()));
+        String actualCode = obj.get("resultCode").toString();
+        String expectCode = testParamPool.getString(CheckEnum.CHECK_RESPONSE_CODE.getValue());
+
+        check.verifyResponseCodeEqualsExpect(expectCode,actualCode);
+        check.verifyResponseDataEqualsExpect(testParamPool.getString(CheckEnum.CHECK_RESPONSE_DATA.getValue()),obj.getJSONObject("data").get("key").toString());
+        check.verifyEqualsBySQL(testParamPool.getString(CheckEnum.CHECK_SQL.getValue()),testParamPool.getString(CheckEnum.CHECK_SQL_COLUMN.getValue()),testParamPool.getString(CheckEnum.CHECK_RESPONSE_DATA.getValue()));
     }
 }

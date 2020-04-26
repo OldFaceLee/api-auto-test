@@ -5,10 +5,10 @@ package com.ai.api.support.em;
  * @date: Create in 2020/4/13 下午6:10
  * @description:
  */
-public enum VerifyEnum {
+public enum CheckEnum {
 
     RESULT_CODE_OK("000000","返回成功"),
-
+    CASE_DESC("caseDesc","Excel中caseDesc列，该列作用为case描述一般用于打印Log方便定位问题"),
     CHECK_RESPONSE_CODE("checkReponseCode","Excel中checkReponseCode列，接口返回期望响应code值"),
     CHECK_RESPONSE_DATA_ASSERT_TYPE("CheckResponseDataAssertType","excel中CheckResponseDataAssertType列，接口返回数据断言类型，相等、包含"),
     CHECK_RESPONSE_DATA("checkResponseData","excel中checkResponseData列，接口返回值"),
@@ -16,7 +16,7 @@ public enum VerifyEnum {
     CHECK_SQL_RESULT_ASSERT_TYPE("checkSqlResultAssertType","excel中checkSqlResultAssertType列，sql查询断言类型，相等、包含"),
     CHECK_SQL_COLUMN("checkSqlResult","excel中checkSqlResult列，sql返回唯一字段column_Key");
 
-    VerifyEnum(String value, String desc) {
+    CheckEnum(String value, String desc) {
         this.value = value;
         this.desc = desc;
     }

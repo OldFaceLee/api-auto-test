@@ -16,7 +16,7 @@ import java.util.regex.Pattern;
 /**
  * @author: lixuejun
  * @date: Create in 2020/4/13 上午9:17
- * @description: 获取excel数据进行转换
+ * @description: 获取excel数据进行转换，excel中手动设置所以cell为文本，不然有时候解析会出错
  */
 @Slf4j
 public class TestParamPool {

@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * @author: lixuejun
  * @date: Create in 2020/4/13 下午10:44
- * @description:  检查
+ * @description:  检查工具类,因为用到了spring的JDBC,所以使用时候需要用@Autowired自动装载，不能new
  */
 @Slf4j
 @Service
@@ -29,23 +29,23 @@ public class Check {
     }
 
     /**
-     * 验证返回状态吗是否相等
+     * 验证返回状态吗是否【相等】
      */
-    public void verifyResultCode(String expect,String actualResultCode){
+    public void verifyResponseCodeEqualsExpect(String expect,String actualResultCode){
         this.assertEquals(expect,actualResultCode);
     }
 
     /**
-     *验证返回指定的jsonKey字段是否与期望相等
+     *验证返回指定的jsonKey字段的value是否与期望【相等】
      */
-    public void verifyResultDataColumnValue(String expect,String actualResultData){
+    public void verifyResponseDataEqualsExpect(String expect,String actualResultData){
         this.assertEquals(expect,actualResultData);
     }
 
     /**
-     *验证实际返回的json中是否包含期望值
+     *验证实际返回的json中是否【包含】期望值
      */
-    public void verifyJsonResultContainsStr(String expect,String actualResultData){
+    public void verifyResponseJsonContainsExpect(String expect,String actualResultData){
         log.info("期望值=【"+expect+"】, 实际值=【"+actualResultData+"】");
         Assert.assertTrue(actualResultData.contains(expect));
     }
@@ -53,14 +53,14 @@ public class Check {
     /**
      *验证捕获的异常是否与期望的异常e.print()相等
      */
-    public void verifyException(String expect,String actualException){
+    public void verifyExceptionEqualsExpect(String expect,String actualException){
         this.assertEquals(expect,actualException);
     }
 
     /**
      *数据库查询验证是否相等
      */
-    public void verifyBySQL(String sql,String expectColumn,String expectResponseValue){
+    public void verifyEqualsBySQL(String sql,String expectColumn,String expectResponseValue){
         if(sql == null || expectColumn == null){
             log.info("sql【"+sql+"】或者 expectColumn【"+expectColumn+"】为空，不执行JDBC" );
             return;
