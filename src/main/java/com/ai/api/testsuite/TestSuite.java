@@ -27,7 +27,7 @@ public class TestSuite extends BaseSuite {
     @Autowired
     TestJDBC testJDBC;
 
-    @Test(groups = {"tc01","tc$"},dataProviderClass = MapDataProvider.class,dataProvider = "tc01")
+    @Test(groups = {"tc01","tc$"},description = "这就是一条测试用例",dataProviderClass = MapDataProvider.class,dataProvider = "tc01")
     public void tc011(Map<String,String> map){
         tc01_test.runScript(map);
 

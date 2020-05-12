@@ -29,11 +29,22 @@ public class TC02_test implements ITestCase {
 
 
     @Override
+    public void initTestData() {
+
+    }
+
+    @Override
     public void runScript(Map<String, String> map) {
         log.info(Thread.currentThread().getName()+"tc02线程");
         TestParamPool testParamPool = new TestParamPool(map);
         int index = testParamPool.getInt("index");
         JSONObject obj = sv.obtainMap(index);
+
 //        Check.verifyJsonResultContainsStr(testParamPool.getString(VerifyEnum.CHECK_RESULT_DATA_COLUMN.getValue()),obj.get("key").toString());
+    }
+
+    @Override
+    public void destroyTestData() {
+
     }
 }

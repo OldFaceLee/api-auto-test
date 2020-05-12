@@ -11,6 +11,10 @@ import java.util.Map;
  */
 public interface ITestCase {
 
+    void initTestData();
+
     void runScript(Map<String,String> excelData);
+
+    void destroyTestData();
 
 }

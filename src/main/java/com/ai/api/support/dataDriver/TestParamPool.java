@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.testng.Assert;
 
+import java.math.BigDecimal;
 import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -171,6 +172,18 @@ public class TestParamPool {
             throw new TestParamPoolException("输入的参数不能为null,应为Double类型");
         }
         return rs;
+    }
+
+    /**
+     *将其string转化为BigDeciaml
+     */
+    public BigDecimal getBigDecimal(String key){
+        String value = map.get(key);
+        BigDecimal bigDecimal = BigDecimal.valueOf(Long.valueOf(value));
+        if (bigDecimal == null) {
+            throw new TestParamPoolException("输入的参数不能为null,应为BigDecimal类型");
+        }
+        return bigDecimal;
     }
 
 }

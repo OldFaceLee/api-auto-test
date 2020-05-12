@@ -34,6 +34,11 @@ public class TC01_test implements ITestCase {
 
 
     @Override
+    public void initTestData() {
+
+    }
+
+    @Override
     public synchronized void runScript(Map<String, String> excelData) {
         log.info(Thread.currentThread().getName()+"tc01线程");
         TestParamPool testParamPool = new TestParamPool(excelData);
@@ -47,6 +52,11 @@ public class TC01_test implements ITestCase {
         check.verifyResponseCodeEqualsExpect(expectCode,actualCode);
         check.verifyResponseDataEqualsExpect(testParamPool.getString(CheckEnum.CHECK_RESPONSE_DATA.getValue()),obj.getJSONObject("data").get("key").toString());
         check.verifyEqualsBySQL(testParamPool.getString(CheckEnum.CHECK_SQL.getValue()),testParamPool.getString(CheckEnum.CHECK_SQL_COLUMN.getValue()),testParamPool.getString(CheckEnum.CHECK_RESPONSE_DATA.getValue()));
+    }
+
+    @Override
+    public void destroyTestData() {
+
     }
 
 }
