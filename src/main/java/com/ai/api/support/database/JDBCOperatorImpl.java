@@ -45,7 +45,11 @@ public class JDBCOperatorImpl implements IJDBCOperator{
         for(Map<String,Object> map: list){
             for(Map.Entry<String,Object> m : map.entrySet()){
                 if(mapKey.equalsIgnoreCase(m.getKey())){
-                    mapVaule.add(m.getValue().toString());
+                    if (m.getValue() == null) {
+                        mapVaule.add(null);
+                    }else {
+                        mapVaule.add(m.getValue().toString());
+                    }
                 }
             }
         }
